@@ -1,0 +1,30 @@
+// Vertical carousel
+// ---------------------------
+.carousel {
+	&.vertical {
+        .carousel-inner {
+          height: 100%;
+        }
+        .item {
+            .transition(top);
+            .transition-duration(0.6s);
+            left: 0;
+            z-index: 2;
+        }
+
+        .active {z-index: 1;}
+        .active,
+        .next.left,
+        .prev.right    { 
+            top: 0; 
+        }
+        .next,
+        .active.right  { 
+            top:  100%; 
+        }
+        .prev,
+        .active.left   { 
+            top: -100%; 
+        }
+    }
+}
